@@ -56,7 +56,7 @@ def lambda_handler(event, context):
     
     # Adjust for Kuala Lumpur Time (UTC+8)
     utc_now = datetime.now(timezone.utc)
-    central_time = utc_now - timedelta(hours=6)  # Kuala Lumpur Time is UTC+8
+    central_time = utc_now + timedelta(hours=8)  # Kuala Lumpur Time is UTC+8
     today_date = central_time.strftime("%Y-%m-%d")
     
     print(f"Fetching games for date: {today_date}")
